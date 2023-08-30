@@ -1,0 +1,42 @@
+h2{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 40px;
+    font-weight: 300;
+}
+
+.business-options{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    list-style: none;
+    width: 70vw;
+    margin: 30px auto;
+}
+
+.card{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 8vw;
+    align-items: center;
+    border: 2px solid darkgrey;
+    border-radius: 10px;
+    background-color: beige;
+    padding: 30px 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.card:hover{
+    transform: scale(1.1);
+    background-color: lightgray;
+}
+
+.card.selected {
+    background-color: lightblue; /* Apply the selected background color */
+}
+
+.card-icon{
+    height: 100px;
+    transform: scale(4);
+}
