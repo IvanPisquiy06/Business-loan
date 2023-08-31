@@ -2,6 +2,7 @@
     margin: 50px 20px;
     padding: 20px;
     border-radius: 5px;
-    border-color: darkblue;
+    border: none;
+    box-shadow: 3px 3px 5px 0;
     font-size: 20px;
 }
