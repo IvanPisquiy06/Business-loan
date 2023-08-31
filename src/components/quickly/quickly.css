@@ -35,3 +35,14 @@
 .prueba{
     height: 100px;
 }
+
+@media screen and (max-width: 480px) {
+    .option{
+        height: 50px;
+        width: 250px;
+    }
+
+    .options{
+        margin-bottom: 40px;
+    }
+}

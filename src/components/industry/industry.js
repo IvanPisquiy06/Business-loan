@@ -3,7 +3,7 @@ import './industry.css';
 function Industry(){
     return <div>
         <h2>What industry are you in?</h2>
-        <select className='selector'>
+        <select className='selector-industry'>
             <option>Accommodation and Food Services</option>
             <option>Administrative & Support and Waste Management & Remediation Services</option>
             <option>Agriculture, Forestry, Fishing and Hunting</option>

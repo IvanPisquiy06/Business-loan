@@ -13,3 +13,9 @@
     border: none;
     box-shadow: 3px 3px 5px 0;
 }
+
+@media screen and (max-width: 480px) {
+    .names{
+        width: auto;
+    }
+}
