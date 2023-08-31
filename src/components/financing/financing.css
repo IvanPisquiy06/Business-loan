@@ -12,3 +12,9 @@
 .financing:focus{
     border: none;
 }
+
+@media screen and (max-width: 480px) {
+    .financing{
+        width: 300px;
+    }
+}

@@ -21,6 +21,7 @@
 .next-button{
     background-color: green;
     color: white;
+    z-index: 1;
 }
 
 .next-button:hover{
