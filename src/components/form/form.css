@@ -37,3 +37,13 @@
     background-color: grey;
     transform: scale(1.1);
 }
+
+.submit-button{
+    background-color: darkblue;
+    color: white;
+}
+
+.submit-button:hover{
+    background-color: blue;
+    transform: scale(1.1);
+}

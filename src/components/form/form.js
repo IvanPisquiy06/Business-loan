@@ -13,6 +13,7 @@ import ZipCode from '../zipCode/zipCode';
 import Name from '../name/name';
 import Phone from '../phone/phone';
 import Email from '../email/email';
+import ThankYou from '../thank-you/thank-you';
 
 class FormComponent extends Component {
   constructor(props) {
@@ -34,6 +35,12 @@ class FormComponent extends Component {
     }));
   };
 
+  handleSubmitClick = () => {
+    this.setState({
+      currentQuestionIndex: -1, // Set an index that doesn't correspond to any question
+    });
+  };
+
   render() {
     const questions = [
       <BusinessType />,
@@ -52,19 +59,33 @@ class FormComponent extends Component {
     ];
 
     const { currentQuestionIndex } = this.state;
+    const isLastQuestion = currentQuestionIndex === questions.length - 1;
 
     return (
       <div className='container'>
-        {questions[currentQuestionIndex]}
-        <div className='buttons'>
-        {currentQuestionIndex > 0 && (
-          <button className='button previous-button' onClick={this.handlePreviousClick}>
-            Previous
-          </button>)}
-          <button className='button next-button' onClick={this.handleNextClick}>
-          Next
-          </button>
-        </div>
+        {currentQuestionIndex === -1 ? (
+          <ThankYou />
+        ) : (
+          <>
+            {questions[currentQuestionIndex]}
+            <div className='buttons'>
+              {currentQuestionIndex > 0 && (
+                <button className='button previous-button' onClick={this.handlePreviousClick}>
+                  Previous
+                </button>
+              )}
+              {isLastQuestion ? (
+                <button className='button submit-button' onClick={this.handleSubmitClick}>
+                  Submit
+                </button>
+              ) : (
+                <button className='button next-button' onClick={this.handleNextClick}>
+                  Next
+                </button>
+              )}
+            </div>
+          </>
+        )}
       </div>
     );
   }
