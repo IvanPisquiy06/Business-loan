@@ -1,9 +1,16 @@
 import './industry.css';
 
-function Industry(){
+const Industry = (props) => {
+
+    const handleSelection = (e) => {
+        const selectedValue = e.target.value;
+        props.setValue(selectedValue)
+        props.isFull(true)
+    }
+
     return <div>
         <h2>What industry are you in?</h2>
-        <select className='selector-industry'>
+        <select className='selector-industry' value={props.value} onChange={handleSelection}>
             <option>Accommodation and Food Services</option>
             <option>Administrative & Support and Waste Management & Remediation Services</option>
             <option>Agriculture, Forestry, Fishing and Hunting</option>

@@ -1,10 +1,22 @@
 import './date.css'
 
-function Date(){
+const Date = (props) => {
+
+    const handleMonthSelection = (e) => {
+        const selectedValue = e.target.value;
+        props.setMonthValue(selectedValue)
+    }
+
+    const handleYearSelection = (e) => {
+        const selectedValue = e.target.value;
+        props.setYearValue(selectedValue)
+        props.isFull(true)
+    }
+
     return<div>
         <h2>When did you start your business?</h2>
         <div className='selectors'>
-            <select className='selector'>
+            <select className='selector' value={props.monthValue} onChange={handleMonthSelection}>
                 <option>January</option>
                 <option>February</option>
                 <option>March</option>
@@ -18,7 +30,7 @@ function Date(){
                 <option>November</option>
                 <option>December</option>
             </select>
-            <select className='selector'>
+            <select className='selector' value={props.YearValue} onChange={handleYearSelection}>
                 <option> 1922 </option>
                 <option> 1923 </option>
                 <option> 1924 </option>

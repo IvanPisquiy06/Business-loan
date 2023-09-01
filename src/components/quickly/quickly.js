@@ -1,11 +1,10 @@
 import './quickly.css'
-import React, { useState } from 'react';
 
-function Quickly(){
-    const [selectedOption, setSelectedOption] = useState('');
+const Quickly = (props) => {
 
     const handleOptionChange = (event) => {
-    setSelectedOption(event.target.value);
+        props.setValue(event.target.value);
+        props.isFull(true)
     };
     return <div className='container'>
         <h2>How quickly do you need the money?</h2>
@@ -14,7 +13,7 @@ function Quickly(){
             <input
                 type="radio"
                 value="Within a week"
-                checked={selectedOption === 'Within a week'}
+                checked={props.value === 'Within a week'}
                 onChange={handleOptionChange}
             />
             Within a week
@@ -23,7 +22,7 @@ function Quickly(){
             <input
                 type="radio"
                 value="Within 2 Weeks"
-                checked={selectedOption === 'Within 2 Weeks'}
+                checked={props.value === 'Within 2 Weeks'}
                 onChange={handleOptionChange}
             />
             Within 2 Weeks
@@ -32,7 +31,7 @@ function Quickly(){
             <input
                 type="radio"
                 value="Within a Month"
-                checked={selectedOption === 'Within a Month'}
+                checked={props.value === 'Within a Month'}
                 onChange={handleOptionChange}
             />
             Within a Month
@@ -41,7 +40,7 @@ function Quickly(){
             <input
                 type="radio"
                 value="Unsure"
-                checked={selectedOption === 'Unsure'}
+                checked={props.value === 'Unsure'}
                 onChange={handleOptionChange}
             />
             Unsure

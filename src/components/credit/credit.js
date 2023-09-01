@@ -1,11 +1,10 @@
 import './credit.css'
-import React, { useState } from 'react';
 
-function Credit(){
-    const [selectedOption, setSelectedOption] = useState('');
+const Credit = (props) => {
 
     const handleOptionChange = (event) => {
-    setSelectedOption(event.target.value);
+        props.setValue(event.target.value);
+        props.isFull(true)
     };
     return <div className='container'>
         <h2>What's your credit score?</h2>
@@ -14,7 +13,7 @@ function Credit(){
             <input
                 type="radio"
                 value="Excellent"
-                checked={selectedOption === 'Excellent'}
+                checked={props.value === 'Excellent'}
                 onChange={handleOptionChange}
             />
             Excellent (720+)
@@ -23,7 +22,7 @@ function Credit(){
             <input
                 type="radio"
                 value="Good"
-                checked={selectedOption === 'Good'}
+                checked={props.value === 'Good'}
                 onChange={handleOptionChange}
             />
             Good (680 - 719)
@@ -32,7 +31,7 @@ function Credit(){
             <input
                 type="radio"
                 value="Fair"
-                checked={selectedOption === 'Fair'}
+                checked={props.value === 'Fair'}
                 onChange={handleOptionChange}
             />
             Fair (640 - 679)
@@ -41,7 +40,7 @@ function Credit(){
             <input
                 type="radio"
                 value="Poor"
-                checked={selectedOption === 'Poor'}
+                checked={props.value === 'Poor'}
                 onChange={handleOptionChange}
             />
             Poor (639 or less)

@@ -1,8 +1,6 @@
-import React, { useState } from 'react';
 import './phone.css';
 
-function Phone() {
-  const [formattedValue, setFormattedValue] = useState('');
+const Phone = (props) => {
 
   const handleInputChange = (event) => {
     const inputValue = event.target.value.replace(/\D/g, ''); // Remove non-digit characters
@@ -13,7 +11,8 @@ function Phone() {
       '($1) $2-$3'
     );
 
-    setFormattedValue(formattedNumber);
+    props.setValue(formattedNumber);
+    props.isFull(true)
   };
 
   return (
@@ -22,7 +21,7 @@ function Phone() {
       <input
         type='text'
         className='phone'
-        value={formattedValue}
+        value={props.value}
         onChange={handleInputChange}
         maxLength="14" // Set the maximum length to accommodate the formatted input
       />

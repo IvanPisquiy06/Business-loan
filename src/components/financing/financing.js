@@ -1,9 +1,16 @@
 import './financing.css'
 
-function Financing(){
+const Financing = (props) => {
+
+    const handleSelection = (e) => {
+        const selectedValue = e.target.value;
+        props.setValue(selectedValue)
+        props.isFull(true)
+    }
+
     return <div>
         <h2>What are you getting Financing for?</h2>
-        <select className='financing'>
+        <select className='financing' value={props.value} onChange={handleSelection}>
             <option>Expansion</option>
             <option>Expansion Purchase</option>
             <option>Purchase a Vehicle</option>
