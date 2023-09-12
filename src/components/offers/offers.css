@@ -1,6 +1,7 @@
 .offer{
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
     width: 100%;
@@ -34,4 +35,20 @@
 
 .offer-button:hover{
     transform: scale(1.1);
+}
+
+@media screen and (max-width:480px){
+    .offer{
+        flex-direction: column;
+        width: auto;
+    }
+
+    .offer-logo{
+        margin: 10px 0;
+    }
+
+    .info{
+        margin: 10px 0;
+        width: auto;
+    }
 }
