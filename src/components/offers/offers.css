@@ -1,0 +1,37 @@
+.offer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    background-color: white;
+    padding: 20px;
+    margin: 20px 0;
+    transition: 0.5s;
+}
+
+.offer:hover{
+    box-shadow: 5px 5px 8px 0 black;
+}
+
+.offer-logo{
+    width: 200px;
+}
+
+.info{
+    width: 30%;
+}
+
+.offer-button{
+    border: none;
+    background-color: #8C2B2B;
+    padding: 10px;
+    color: white;
+    font-size: 25px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.offer-button:hover{
+    transform: scale(1.1);
+}

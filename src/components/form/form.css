@@ -19,13 +19,13 @@
 }
 
 .next-button{
-    background-color: green;
+    background-color: #048ABF;
     color: white;
     z-index: 1;
 }
 
 .next-button:hover{
-    background-color: darkgreen;
+    background-color: #1E5359;
     transform: scale(1.1);
 }
 

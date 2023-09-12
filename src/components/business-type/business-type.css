@@ -19,7 +19,7 @@ h2{
     flex-wrap: wrap;
     width: 8vw;
     align-items: center;
-    border: 2px solid darkgrey;
+    border: 2px solid #1E5359;
     border-radius: 10px;
     background-color: beige;
     padding: 30px 20px;
@@ -30,10 +30,11 @@ h2{
 .card:hover{
     transform: scale(1.1);
     background-color: lightgray;
+    border-color: #8C2B2B;
 }
 
 .card.selected {
-    background-color: lightblue; /* Apply the selected background color */
+    background-color: #F2EC99; /* Apply the selected background color */
 }
 
 .card-icon{
